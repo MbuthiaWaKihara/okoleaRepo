@@ -1,0 +1,466 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{background:url('wasaga1.jpg');
+    background-size:cover;
+    overflow-x: hidden;
+}
+.okolea_title{
+	font-weight: bolder;
+	font-family: fantasy;
+	text-shadow: -2px -2px 1px rgba(0,0,0,.7);
+}
+.menu{
+    width:100%;
+    background:black;
+    opacity:0.9;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+}
+/*Strip the ul of padding and list styling*/
+ .menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+    position: relative;
+    display:flex;
+}
+.menu li{
+    line-height: 50px;
+    height: 50px;
+    display:inline-block;
+    float:left;
+    margin-right: 1px;
+    position: relative;
+}
+/*Styles for menu links*/
+.menu ul li a {
+    display: block;
+    min-width: 175px;
+    max-width: 175px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: "helvetica Neue",Arial, Helvetica, sans-serif;
+    color:#f2f2f2;
+    background:black;
+    text-decoration:none;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    position:relative;
+	text-transform: capitalize;
+	font-weight: bolder;
+}
+/*Hover state for top level links*/
+.menu li a:hover{
+    color: #f2f2f2;
+    background:green;
+    font:size 20px;
+    opacity: 0.9;
+}
+.search-form{
+    margin-top:15px;
+    float:right;
+    margin-right: 100px;
+}
+#search[type=text]{
+    padding: 7px;
+    border: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    opacity:0.7;
+    height: 33px;
+}
+button{
+    float:right;
+    background: maroon;
+    color:white;
+    border-radius: 0 5px 5px 0;
+    cursor:pointer;
+    position:relative;
+    padding: 7px;
+    font-family: sans-serif;
+    border: none;
+    font-size: 16px;
+}
+/*Style for dropdown links*/
+.menu ul li:hover ul li a{
+    background:black;
+    color:#f2f2f2;
+    height: 50px;
+    line-height: 50px;
+    opacity:0.8;
+    position: relative;
+    
+}
+/*Hover state for dropdown links*/
+.menu ul li:hover ul li a:hover{
+    color: #f2f2f2;
+    background:green;
+    font:size 20px;
+    opacity: 1.0;
+}
+.menu ul li:hover ul li:hover ul li a{
+background: #f2f2f2;
+color: black;
+height: 50px;
+line-height: 50px;
+opacity:0.8;
+}
+.menu ul li:hover ul li:hover ul li a:hover{
+    color: #f2f2f2;
+    background:green;
+    font:size 20px;
+    opacity: 0.8;
+}
+/*Hide dropdownlinks until they are needed*/
+.menu li ul{
+    display:none;
+}
+/*Make dropdown links vertical*/
+.menu ul li ul li{
+    display:block;
+    float:none;
+}
+.menu ul li ul li ul li{
+    display:block;
+    float: left;
+    position: relative;
+    left:175px;
+    top:-50px;
+	z-index: 5;
+}
+/*Prevent text wrapping on dropdown links*/
+.menu ul li ul li a{
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+/*Display the dropdown on hover*/
+ul li a:hover+.hidden,.hidden:hover{
+    display:block;
+    float: none;
+    position: relative;
+}
+nav ul li a::before,
+nav ul li a::after{
+    content: "";
+    height:6px;
+    width: 100%;
+    background-color:maroon;
+    position:absolute;
+    left:0;
+    transition:all .5s;
+    transform: scaleX(0);}
+nav ul li a::before{
+    top:0;
+    transform-origin: left;
+}
+nav ul li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+        transform: scaleX(1);}
+
+/*cascading nav styles*/
+#navmenu  a:hover{
+    background-color: green;
+}
+#navmenu,ul .sub1,ul .sub2 {
+    list-style-type: none;
+    padding: 0px;
+}
+#navmenu li{
+    width: 200px;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin-right: 0px;
+
+}
+#navmenu a{
+    color: white;
+    text-transform: capitalize;
+    font-size: 18px;
+    display:block;
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    background-color:black;
+}
+#navmenu .sub2 li{
+    width: 125px;
+}
+.sub2{
+    float: none;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+.sub3{
+    position: absolute;
+    top:0px;
+    left:-50px;
+}
+.sub1 ,.sub2,.sub3{
+    display: none;
+}
+#navmenu li:hover .sub1{
+    display: block;
+}
+.sub1 li:hover .sub2,.sub2 li:hover .sub3{
+    display: block;
+    float: left;
+} 
+
+/*Hide checkbox*/
+ input[type=checkbox]{
+    display:none;
+}
+/*Show the menu when the invisible checkbox is checked*/
+input[type=checkbox]:checked~.menu{
+    display:block;
+}
+.show-menu{
+    font-family: "helvetica Neue",Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color:#f2f2f2;
+    background:rgb(129, 74, 74);
+    text-align: center;
+    padding: 10px 0;
+    display:none;
+
+}
+.info{
+    max-width:100%;
+    background:rgba(236, 236, 243, 0.6);
+    border:none;
+    outline:none;
+    color:black;
+    font-size:18px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid maroon;
+    border-radius:5px;
+    display: flex;
+}
+.logs{
+    margin-top: 5px;
+    margin-left:450px;
+    margin-right:530px;
+    color:#fff;
+    transition:all 4s ease-in-out;
+    background-color:rgba(245, 245, 245, 0.7);
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 32px;
+    border-radius: 20px 20px 20px 20px;
+    border:3.5px solid maroon;
+	display: block;
+}
+
+.errormessage{
+	color: maroon;
+	font-size: 10px;
+	height: 10px;
+	text-align: center;
+	position: relative;
+	top: -8px;
+	font-weight: bolder;
+}
+#switch{
+    margin-left:450px;
+    margin-right:530px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    background-color:rgba(245, 245, 245, 0.486);
+	display: none;
+}
+
+#switch button{
+    width:50%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#switch #adminTitle{
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	background-color: maroon;
+	opacity: .9;
+	border-radius: 20px 20px 0px 0px;
+	color: white;
+}
+
+#switch #adminTitle:hover{
+	opacity: .6;
+}
+
+#switch #suggestionTitle{
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	background-color: maroon;
+	opacity: .9;
+	border-radius: 20px 20px 0px 0px;
+	color: white;
+}
+
+#switch #suggestionTitle:hover{
+	opacity: .6;
+}
+
+#signup{
+    border-radius:0px 20px 0px 0px;
+    border-left:none;
+}
+#login{
+    border-radius:20px 0px 0px 0px;
+    border-right:none;
+}
+#press1{
+    position: relative;
+    height:50px;
+    width: 50%;
+    border-radius:140px 0px 20px 0px;
+    font-weight: bold;
+    float: right;
+    right:-10px;
+    background-color: maroon;
+}
+#press2{
+    position: relative;
+    height:51px;
+    width: 50%;
+    border-radius:0px 140px 0px 20px;
+    font-weight: bold;
+    float:left;
+    left:-10px;
+    background-color: maroon;
+}
+#press3{
+	position: relative;
+    height:51px;
+    width: 50%;
+    border-radius:0px 140px 0px 20px;
+    font-weight: bold;
+    float:left;
+    left:-10px;
+    background-color: maroon;
+}
+#press1:hover,#press2:hover,#press3:hover{
+    background-color: green;
+    opacity:0.9;
+}
+
+.file_container{
+	//max-width: 250px;
+	border-radius: 10px;
+	margin: 6px;
+	color: maroon;
+	font-weight: bolder;
+	text-align: center;
+	background-color:rgb(245, 245, 245);
+	opacity: .9;
+	width: 20%;
+
+}
+.file_container:hover{
+	opacity: 1;
+}
+
+.file_name{
+	color: white;
+	text-transform: lowercase;
+	background-color: rgba(0,0,0,.3);
+}
+
+.download_link{
+	color: black;
+	text-decoration: none;
+	text-align: center;
+}
+.download_link:hover{
+	color: maroon;
+}
+
+.download_link:active{
+	color: green;
+}
+
+.approve_link{
+	color: black;
+	text-decoration: none;
+	text-align: center;
+}
+.approve_link:hover{
+	color: maroon;
+}
+
+.approve_link:active{
+	color: green;
+}
+
+.disapprove_link{
+	color: black;
+	text-decoration: none;
+	text-align: center;
+}
+.disapprove_link:hover{
+	color: maroon;
+}
+
+.disapprove_link:active{
+	color: green;
+}
+
+.files{
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: 7%;
+	margin-right: 7%;
+}
+
+.file_image{
+	margin: 0px;
+	height: 150px;
+	width: 80%;
+}
+
+
+/*Responsive styles*/
+@media screen and (max-width:760px){
+    /*Make dropdown links appear*/
+    .menu{
+        position:static;
+        display:none;
+    }
+    /*Create vertical spacing*/
+    li{
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    .menu ul li,li a{
+        width:100%;
+        display: block;
+    }
+    .show-menu{
+        display:block;
+    }
+    body{
+        background:white;
+    }
+    h1{
+        text-align: center;
+    }
+}
