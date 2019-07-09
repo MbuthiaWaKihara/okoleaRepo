@@ -594,9 +594,9 @@
             <li><a href = "contactUs.php">Contact us</a></li>
 			<?php
 			if(!isset($_SESSION['admin_id']) and !isset($_SESSION['adm_no'])){
-				echo '<li><a href = "" id = "loginshow">Log In</a></li>';
-				echo '<li><a href = "" id = "signinshow">Sign Up</a></li>';
-				echo '<li><a href = "" id = "adminshow">Admin Login</a></li>';
+				echo '<li><a href = "" id = "loginfooter">Log In</a></li>';
+				echo '<li><a href = "" id = "signinfooter">Sign Up</a></li>';
+				echo '<li><a href = "" id = "adminfooter">Admin Login</a></li>';
 			}
 			elseif(isset($_SESSION['admin_id']) or isset($_SESSION['adm_no'])){
 				echo '<li><a href = "logout.php">Log Out</a></li>';
@@ -665,6 +665,18 @@
 				return false;
 			});
 			
+			//dictate what happens when user clicks on the log in link
+			$("#loginfooter").click(function() {
+				//show the log in sign in button when this link is clicked
+				$("#remove_form").show();
+				$("#switch").fadeIn(2000);
+				$("#switch").load("loginSignupButtonL.php");
+				$(".logs").fadeIn(2000);
+				$(".logs").load("loginForm.php");
+				window.scrollTo(0,0);
+				return false;
+			});
+			
 			//dictate what happens when the user clicks on the sign in link
 			$("#signinshow").click(function() {
 				//show the log in sign in button when this link is clicked
@@ -676,6 +688,18 @@
 				return false;
 			});
 			
+			//dictate what happens when the user clicks on the sign in link
+			$("#signinfooter").click(function() {
+				//show the log in sign in button when this link is clicked
+				$("#remove_form").show();
+				$("#switch").fadeIn(2000);
+				$("#switch").load("loginSignupButtonS.php");
+				$(".logs").fadeIn(2000);
+				$(".logs").load("signinForm.php");
+				window.scrollTo(0,0);
+				return false;
+			});
+			
 			//dictate what happens when the user clicks on the admin link
 			$("#adminshow").click(function() {
 				$("#remove_form").show();
@@ -683,6 +707,17 @@
 				$("#switch").load("adminTitle.php");
 				$(".logs").fadeIn(1000);
 				$(".logs").load("adminLoginForm.php");
+				return false;
+			});
+			
+			//dictate what happens when the user clicks on the admin link
+			$("#adminfooter").click(function() {
+				$("#remove_form").show();
+				$("#switch").fadeIn(2000);
+				$("#switch").load("adminTitle.php");
+				$(".logs").fadeIn(1000);
+				$(".logs").load("adminLoginForm.php");
+				window.scrollTo(0,0);
 				return false;
 			});
 						
