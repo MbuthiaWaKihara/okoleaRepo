@@ -2,8 +2,6 @@
 Repository for Okolea Platform, for Computer Science Project 1, CS, Moi University
 
 Name: OKOLEA PLATFORM MOI UNIVERSITY
-Author(s): KIHARA EVANSON MBUTHIA (Backend -> PHP, Frontend -> JS and JQUERY)
-		 : WASAGA ELISHA OPIYO (Frontend -> HTML, CSS)
 	
 BRIEF PROJECT DESCRIPTION
 Okolea platform is a website that intends to solve the problem of file sharing in higher learning institutions
