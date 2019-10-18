@@ -9,7 +9,7 @@
 	//NORMAL MODE FETCH
 	//fetch all the files with an approved status when the homepage is in its normal state
 	//temporarily **
-	//fetch all the information from the uploads table (information about all the files uploaded by an admins) 
+	//fetch all the information from the uploads table (information about all the files uploaded by an admin) 
 	$sql = "SELECT * FROM uploads WHERE status = 'approved' LIMIT 20;";
 	$result = mysqli_query($connection, $sql);
 	$all_files_data = mysqli_fetch_all($result, MYSQLI_ASSOC);

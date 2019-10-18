@@ -1,6 +1,6 @@
 <?php
 	
-	session_start();
+	error_reporting(0);
 
 	//check if the submit button was pressed:
 	if(isset($_POST['submit'])){
