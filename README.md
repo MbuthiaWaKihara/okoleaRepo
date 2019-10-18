@@ -27,3 +27,6 @@ both of these files have a manage_* file that is used for the logic behind the f
 REQUIREMENTS TO RUN THE WEBSITE LOCALLY
 We have included an okolea_db.docx file that has the code for setting up the website's database. The website uses MYSQL as its DBMS.
 You will need a local server to run the website on your computer, and a database named okolea, set up as described inside the file mentioned above.
+
+![testing](https://github.com/MbuthiaWaKihara/okoleaRepo/blob/master/images/adminlogin%20(2).png)
+![testing](https://github.com/MbuthiaWaKihara/okoleaRepo/blob/master/images/Screenshot%20(98).png)
