@@ -1,32 +1,44 @@
-# okoleaRepo
-Repository for Okolea Platform, for Computer Science Project 1, CS, Moi University
-
-Name: OKOLEA PLATFORM MOI UNIVERSITY
-	
-BRIEF PROJECT DESCRIPTION
-Okolea platform is a website that intends to solve the problem of file sharing in higher learning institutions
-
-Users can log into the website as administrators or as students. In our project, target users was Moi University students.
-We intended that all administrators be class representatives for the different courses that are offered inside Moi University.
-These class representatives have accounts which are created and modified by the maintainers of the website.
-Administrators are the only ones allowed to upload files(learning materials) to the website.
-The suggest upload feature allows for students to suggest a file for upload into the website, but these suggested files have to be verified by a relevant
-administrator before they can be visible and available for download by all other users.
-
-FILES AND PROJECT STRUCTURE
-The file index.php is the beginning of running of the website. The file simply redirects to homepage.php. We wrote the file just incase, in future, the website needs 
-to be hosted.
-homepage.php has all the functionalities, that is upload system, suggest upload system, verify suggestions system and the delete files system.
-homepage.php is also used for display of files, for users to download.
-manage_homepage.php is where all code for all functionalities inside the homepage is written. This file is then included inside the homepage.
-
-engineering.php and biological.php are very similar in structure. They are simply used for filter purposes. By filter we mean the ability to narrow down 
-to a specific upload among many uploads.
-both of these files have a manage_* file that is used for the logic behind the filter.
-
-REQUIREMENTS TO RUN THE WEBSITE LOCALLY
-We have included an okolea_db.docx file that has the code for setting up the website's database. The website uses MYSQL as its DBMS.
-You will need a local server to run the website on your computer, and a database named okolea, set up as described inside the file mentioned above.
-
+# Okolea Platform Moi University
 ![testing](https://github.com/MbuthiaWaKihara/okoleaRepo/blob/master/images/adminlogin%20(2).png)
 ![testing](https://github.com/MbuthiaWaKihara/okoleaRepo/blob/master/images/Screenshot%20(98).png)
+
+# Contributers
+<ol>
+    <li>Evans Mbuthia</li>
+    <li>Elisha Wasaga</li>
+    <li>Kamau Muchori</li>
+</ol>
+
+# Purpose
+<p>
+Okolea Platform is a website that allows students to gain access to and share good revision material
+</p>
+
+<p>
+The inspiration for such a system like Okolea came from an experience we had, as university students, while trying to efficiently prepare for continous assesment tests, and examinations. We found that the higher edicational institutes nature of not having fixed course material for students, unlike the rest of the 8-4-4 system in Kenya, left a majority of students to rely on their own skills to find good revision material. Higher institutions, especially public ones, also don't have a well organized way of archiving material used by students at a certain point in time. This creates a kind of unfair ground for the students, with some students failing to exhaust their potential due to poor research skills. 
+</p>
+
+<p>
+Okolea is a platform that relies on the students themselves to grow. The system not only acts as a good archive for past papers and notes, but also enables students to share resources they consider helpful with others. Okolea's idea is that a selected group of students (class representatives/ student leaders) are able to upload material directly into the website, and are also able to verify material uploaded by other students. This way, someone is always accountable for every download in the site.
+</p>
+
+# How to run okolea platform locally
+<p>For now, Okolea can only run on your local machine. However, Okolea is open source and anyone is invited to fork the repo and help contribute to improve it</p>
+<p>
+To install okolea, you will need a local server, during development, we used xampp.
+</p>
+<ol>
+    <li>Clone the repository</li>
+    <li>When using xampp, put the folder with the repor under the root folder(htdocs)</li>
+    <li>Run the mysqli_db set up file in the top level of the repo folder to create the tables required</li>
+    <li>You can create initial admins and students to start with</li>
+    <li>Start apache and run localhost with the url pointing to the repo folder</li>
+</ol>
+
+# Known Bugs
+<ol>
+    <li>The website is not responsive.</li>
+    <li>CSS work needed.</li>
+</ol>
+# License 
+MIT 
