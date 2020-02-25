@@ -40,5 +40,6 @@ To install okolea, you will need a local server, during development, we used xam
     <li>The website is not responsive.</li>
     <li>CSS work needed.</li>
 </ol>
+
 # License 
 MIT 
