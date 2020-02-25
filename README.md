@@ -19,7 +19,7 @@ The inspiration for such a system like Okolea came from an experience we had, as
 </p>
 
 <p>
-Okolea is a platform that relies on the students themselves to grow. The system not only acts as a good archive for past papers and notes, but also enables students to share resources they consider helpful with others. Okolea's idea is that a selected group of students (class representatives/ student leaders) are able to upload material directly into the website, and are also able to verify material uploaded by other students. This way, someone is always accountable for every download in the site.
+Okolea is a platform that relies on the students themselves to grow. The system not only acts as a good archive for past papers and notes, but also enables students to share resources they consider helpful with others. Okolea's idea is that a selected group of students (class representatives/ student leaders) are able to upload material directly into the website, and are also able to verify material uploaded by other students. This way, someone is always accountable for every upload in the site.
 </p>
 
 # How to run okolea platform locally
