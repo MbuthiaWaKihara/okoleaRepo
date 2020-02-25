@@ -29,7 +29,7 @@ To install okolea, you will need a local server, during development, we used xam
 </p>
 <ol>
     <li>Clone the repository</li>
-    <li>When using xampp, put the folder with the repor under the root folder(htdocs)</li>
+    <li>When using xampp, put the folder with the repo under the root folder(htdocs)</li>
     <li>Run the mysqli_db set up file in the top level of the repo folder to create the tables required</li>
     <li>You can create initial admins and students to start with</li>
     <li>Start apache and run localhost with the url pointing to the repo folder</li>
